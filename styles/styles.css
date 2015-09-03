@@ -58,7 +58,7 @@ h5 {
     list-style-type: none;
 }
 
-.mdi-ul>li {
+.mdi-ul > li {
     position: relative;
     margin-bottom: 15px;
 }
@@ -69,4 +69,11 @@ h5 {
     width: 2em;
     top: 0.4em;
     text-align: center;
+}
+
+.footer {
+	margin-top: 40px;
+}
+.footer > p {
+	color: rgba(0,0,0,0.4);
 }
