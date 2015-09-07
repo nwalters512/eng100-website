@@ -4,43 +4,74 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 <html>
 
 <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
     <title>Nathan Walters</title>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="stylesheet" href="styles/mdi.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-    <!-- License for Material Design Icons: https://github.com/Templarian/MaterialDesign/blob/master/license.txt -->
-    <link rel="stylesheet" href="http://cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css">
+    <!-- Search engine stuff -->
+    <meta name="description" content="Welcome to my personal website! Learn more about who I am and what I do.">
+    <meta name="author" content="Nathan Walters">
+    <!-- Open Graph stuff, because why not? -->
+    <meta property="og:title" content="Nathan Walters">
+    <meta property="og:description" content="Welcome to my personal website! Learn more about who I am and what I do.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="http://nwalters.com/img/profile.jpg">
+    <meta property="og:url" content="http://nwalters.com">
+    <!-- Styles! -->
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/mdi.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
+    <link href="http://cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
+    <!-- GA tracking -->
+    <script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-67210292-1', 'auto');
+    ga('send', 'pageview');
+    </script>
 </head>
 
 <body>
     <div class="main-container">
         <div class="content">
-            <img class="profile" src="images/profile.jpg" />
+            <div id="profile-wrapper">
+                <img class="profile grow" src="img/profile.jpg" />
+            </div>
             <h4 class="intro">Hi, I'm Nathan</h4>
             <p class="links">/ <a href="http://github.com/nwalters512">github</a> / <a href="https://www.linkedin.com/pub/nathan-walters/104/b97/462">linkedin</a> / <a href="resume.pdf">resume</a> /</p>
             <h5>About</h5>
-            <p>I'm pursuing a degree in Computer Science at the University of Illinois Urbana-Champaign. As a freshman, I'm taking CS 125, an in-depth introducting into the world of comptuer science; I can't wait to get into the higher-level courses (I'm looking at you, 225!).</p>
+            <p>I'm pursuing a Bachelor of Computer Science at the University of Illinois Urbana-Champaign. As a freshman, I'm taking CS 125, an in-depth introduction to the world of comptuer science; I can't wait to get into the higher-level courses (I'm looking at you, 225!).</p>
             <h5>Experience</h5>
-            <p>I've been using computers for as long as I can remember, and I've been interested particularly in computer science for about four years. I don't have much formal experience with computer science; most of my knowledge comes from my experiences on the software subteam of <a href="http://wildstang.org/">my school's FIRST Robotics team</a>. During my years on the team, I had the opportunity to work with many talented students and adult mentors. I gained valuable experience in C/C++, Java, Android, networking, embedded systems, and more.</p>
+            <p>I've been using computers for as long as I can remember, and I've developed my passion for computer science over the past four years through my experiences on the software subteam of <a href="http://wildstang.org/">my school's FIRST Robotics team</a>. During my years on the team, I gained valuable experience in C/C++, Java, Android, networking, and embedded systems. I had the opportunity to work with many talented adult mentors and students, and also to mentor younger students as I grew more knowledgeable.</p>
             <p>I'm an active contributor to <a href="http://www.thebluealliance.com">The Blue Alliance</a>, an open-source project that hosts information about FIRST Robotics events, teams, and more. I've worked extensively on their <a href="https://play.google.com/store/apps/details?id=com.thebluealliance.androidclient&hl=en">Android app</a>, which had over 8,000 users during the 2015 competition season.</p>
+            <p>One of the largest projects I've worked on was a scouting system for my robotics team. At competitions, most teams collect data on other teams in a process called "scouting". The most popular way to do this is to collect data on paper sheets that must later be entered into a spreadsheet. However, my team identified this process as very inefficient and sought a better solution.</p>
+            <p>Working with the scouting subteam and several other students, I lead the development of an electronic scouting system that we called WildRank. It utilized Android tablets for data collection, a desktop app for compiling the data in a spreadsheet, and a flash drive to shuttle data around (wireless networking is not allowed at competitions). Over the course of two years, we were able to dramatically improve the speed of data collection and analysis. Ultimately, we eleminated the spreadsheet entirely and merged that functionality into a single Android app that could handle data collection, viewing, and analysis. The entire system was open-sourced to the FIRST community and was very well received by other teams.</p>
             <h5>Fun facts</h5>
             <ul class="mdi-ul">
                 <li><i class="mdi mdi-li mdi-earth"></i>
-                    <p>This past summer, I had the opportunity to travel abroad with my uncles; over the course of three weeks, I saw London, Paris, and Japan. This experience inspired in me a love of international travel, and I can't wait for my next opportunity to explore the globe!</p>
+                    <p>This past summer, I had the opportunity to travel abroad to London, Paris, Tokyo, Kyoto, and other areas of Japan. This experience has given me a new perspective as a global citizen and has inspired in me a love of international travel and exploration. I can't wait for my next opportunity to explore the globe!</p>
                 </li>
                 <li><i class="mdi mdi-li mdi-tennis"></i>
-                    <p>I'm a recreational tennis player; even though I'm not that good, hitting around a ball with some friends is a great way to pass the time.</p>
+                    <p>I'm a recreational tennis player; hitting a ball around is a great way to spend time with friends and stay fit.</p>
                 </li>
                 <li><i class="mdi mdi-li mdi-music-note"></i>
-                    <p>I was involved in my high school's band program for four years. I played the alto sax in the concert, symphonic, and marching bands.</p>
+                    <p>I played the alto sax in my high school's concert, symphonic, and marching bands for four years. I'm hoping to continue playing for many years to come!</p>
                 </li>
             </ul>
             <div class="footer">
-                <p>© 2015. All rights reserved.</p>
+                <p>Site design by me, using <a href="https://materialdesignicons.com/">Material Design Icons</a>, <a href="https://necolas.github.io/normalize.css/">normalize.css</a>, and <a href="https://www.google.com/fonts">Google fonts</a>
+                    <p>© 2015. All rights reserved.</p>
             </div>
         </div>
     </div>
