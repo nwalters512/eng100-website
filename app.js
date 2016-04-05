@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'njk');
 nunjucks.configure('views', {
   autoescape: true,
+  trimBlocks: true,
   express: app
 });
 

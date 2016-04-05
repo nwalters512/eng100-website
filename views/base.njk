@@ -1,19 +1,25 @@
-<!DOCTYPE html
-PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
+{% macro title()%}
+{% block title %}Nathan Walters{% endblock %}
+{% endmacro %}
+
+{% macro description() %}
+{% block description %}Nathan Walters' personal website. Learn more about who I am and what I do!{% endblock %}
+{% endmacro %}
 
 <head>
     <meta charset="UTF-8">
-    <title>Nathan Walters</title>
+    <title>{{ title() }}</title>
     <link rel="shortcut icon" href="img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Search engine stuff -->
-    <meta name="description" content="Welcome to my personal website! Learn more about who I am and what I do.">
+    <meta name="description" content="{{ description() }}">
     <meta name="author" content="Nathan Walters">
     <!-- Open Graph stuff, because why not? -->
-    <meta property="og:title" content="Nathan Walters">
-    <meta property="og:description" content="Welcome to my personal website! Learn more about who I am and what I do.">
+    <meta property="og:title" content="{{ title() }}">
+    <meta property="og:description" content="{{ description() }}">
     <meta property="og:type" content="website">
     <meta property="og:image" content="http://nwalters.com/img/profile.jpg">
     <meta property="og:url" content="http://nwalters.com">
@@ -43,7 +49,6 @@ PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
 </head>
 </body>
 {% block content %}
-Original content!
 {% endblock %}
 </body>
 </html>
