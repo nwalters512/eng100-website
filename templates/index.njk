@@ -1,0 +1,31 @@
+{% extends "base.njk" %}
+
+{% block title %}Nathan Walters - Home{% endblock %}
+{% block description %}Nathan Walters' personal website. Learn more about who I am and what I do!{% endblock %}
+
+{% block content %}
+<div id="profile-wrapper">
+    <img class="profile grow" src="img/profile.jpg" />
+</div>
+<h1 class="intro">Hi, I'm Nathan</h1>
+<p class="links">/ <a href="http://github.com/nwalters512">github</a> / <a href="https://www.linkedin.com/pub/nathan-walters/104/b97/462">linkedin</a> / <a href="/files/resume.pdf">resume</a> /</p>
+<h2>About</h2>
+<p>I'm pursuing a Bachelor of Computer Science at the University of Illinois Urbana-Champaign. As a freshman, I'm taking CS 125, an in-depth introduction to the world of comptuer science; I can't wait to get into the higher-level courses (I'm looking at you, 225!).</p>
+<h2>Experience</h2>
+<p>I've been using computers for as long as I can remember, and I've developed my passion for computer science over the past four years through my experiences on the software subteam of <a href="http://wildstang.org/">my school's FIRST Robotics team</a>. During my years on the team, I gained valuable experience in C/C++, Java, Android, networking, and embedded systems. I had the opportunity to work with many talented adult mentors and students, and also to mentor younger students as I grew more knowledgeable.</p>
+<p>I'm an active contributor to <a href="http://www.thebluealliance.com">The Blue Alliance</a>, an open-source project that hosts information about FIRST Robotics events, teams, and more. I've worked extensively on their <a href="https://play.google.com/store/apps/details?id=com.thebluealliance.androidclient&hl=en">Android app</a>, which had over 8,000 users during the 2015 competition season.</p>
+<p>One of the largest projects I've worked on was a scouting system for my robotics team. At competitions, most teams collect data on other teams in a process called "scouting". The most popular way to do this is to collect data on paper sheets that must later be entered into a spreadsheet. However, my team identified this process as very inefficient and sought a better solution.</p>
+<p>Working with the scouting subteam and several other students, I led the development of an electronic scouting system that we called <a href="https://github.com/nwalters512/wildrank-android-v2">WildRank</a>. It utilized Android tablets for data collection, a desktop app for compiling the data in a spreadsheet, and a flash drive to shuttle data around (wireless networking is not allowed at competitions). Over the course of two years, we were able to dramatically improve the speed of data collection and analysis. Ultimately, we eleminated the spreadsheet entirely and merged that functionality into a single Android app that could handle data collection, viewing, and analysis. The entire system was open-sourced to the FIRST community and was <a href="http://www.chiefdelphi.com/forums/showthread.php?t=129763">very well received</a> by other teams.</p>
+<h2>Fun facts</h2>
+<ul class="mdi-ul">
+    <li><i class="mdi mdi-li mdi-earth"></i>
+        <p>This past summer, I had the opportunity to travel abroad to London, Paris, Tokyo, Kyoto, and other areas of Japan. This experience has given me a new perspective as a global citizen and has inspired in me a love of international travel and exploration. I can't wait for my next opportunity to explore the globe!</p>
+    </li>
+    <li><i class="mdi mdi-li mdi-tennis"></i>
+        <p>I'm a recreational tennis player; hitting a ball around is a great way to spend time with friends and stay fit.</p>
+    </li>
+    <li><i class="mdi mdi-li mdi-music-note"></i>
+        <p>I played the alto sax in my high school's concert, symphonic, and marching bands for four years. I'm hoping to continue playing for many years to come!</p>
+    </li>
+</ul>
+{% endblock %}

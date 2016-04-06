@@ -7,6 +7,9 @@ var bodyParser = require('body-parser');
 var exbars = require('exbars');
 var routes = require('./routes/index');
 var nunjucks = require('nunjucks');
+var markdown = require('nunjucks-markdown');
+var marked = require('marked');
+var FetchPost = require('./fetch-post');
 
 var app = express();
 
@@ -17,11 +20,24 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.set('view engine', 'njk');
-nunjucks.configure('views', {
+
+var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(['markdown', 'templates'], {
+  watch: true
+}), {
   autoescape: true,
-  trimBlocks: true,
-  express: app
+  trimBlocks: true
 });
+
+env.express(app);
+
+env.addExtension('FetchPost', new FetchPost(env));
+
+// Add support for rendering markdown
+env.addFilter('render_markdown', function(filename) {
+  return "It works!";
+});
+
+markdown.register(env, marked);
 
 app.use('/', routes);
 
@@ -38,22 +54,32 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
-    res.status(err.status || 500);
-    res.render('error', {
-      message: err.message,
-      error: err
-    });
+    var status = err.status || 500;
+    res.status(status);
+    if(err.status == 404) {
+      res.render('404');
+    } else {
+      res.render('error', {
+        message: err.message,
+        error: {}
+      });
+    }
   });
 }
 
 // production error handler
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
-  res.status(err.status || 500);
-  res.render('error', {
-    message: err.message,
-    error: {}
-  });
+  var status = err.status || 500;
+  res.status(status);
+  if(err.status == 404) {
+    res.render('404');
+  } else {
+    res.render('error', {
+      message: err.message,
+      error: {}
+    });
+  }
 });
 
 module.exports = app;

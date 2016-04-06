@@ -1,0 +1,19 @@
+{% extends "base.njk" %}
+
+{% block content %}
+{% post file %}
+<h1>{{ post.attrs.title }}</h1>
+
+{% if post.attrs.description %}
+<h3>{{ post.attrs.description }}</h3>
+{% endif %}
+
+{% if post.attrs.date %}
+<h5>{{ post.attrs.date }}</h5>
+{% endif %}
+
+{% markdown %}
+{{ post.body }}
+{% endmarkdown %}
+
+{% endblock %}
