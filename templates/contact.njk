@@ -1,0 +1,31 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+<h1>Contact me</h1>
+<iframe id="hiddenContactFrame" name="hiddenContactFrame" style="display:none;"></iframe>
+<form id="contact" action="https://docs.google.com/forms/d/1ltU_qCTaPqDWGfcHAHd6qoiMW-jHp25XwjXWWnjj7eI/formResponse" target="hiddenContactFrame" method="POST">
+  <input type="text" name="entry.1794226596" placeholder="Name" id="contactName" class="form-control" required>
+  <input type="email" name="entry.2080679698" placeholder="Email" id="contactEmail" class="form-control" required>
+  <textarea name="entry.1238215088" placeholder="Message" rows="5" id="contactMessage" class="form-control" required></textarea>
+  <button class="btn btn-primary btn-raised" type="submit">Send Message</button>
+</form>
+<div id="confirmation" style="display:none;">
+  <p>Thanks for the message! I'll get back to you as soon as possible.</p>
+</div>
+
+<script type="text/javascript">
+document.getElementById("hiddenContactFrame").addEventListener('load',function(e){
+	document.getElementById("contactName").value="";
+	document.getElementById("contactEmail").value="";
+	document.getElementById("contactMessage").value="";
+
+	showConfirmation();
+});
+function showConfirmation(str) {
+  document.getElementById("contact").style.display="none";
+  document.getElementById("confirmation").style.display="block";
+}
+</script>
+
+{% endblock %}

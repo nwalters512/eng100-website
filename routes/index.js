@@ -10,4 +10,8 @@ router.get('/about-site', function(req, res, next) {
   res.render('markdown', {file: 'about-site.md'});
 });
 
+router.get('/contact', function(req, res, next) {
+  res.render('contact');
+});
+
 module.exports = router;
