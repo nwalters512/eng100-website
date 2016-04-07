@@ -12,6 +12,8 @@ gulp.task('default', ['watch']);
 
 gulp.task('server', ['serve', 'watch']);
 
+gulp.task('deploy', ['sass', 'js', 'eb-deploy']);
+
 gulp.task('sass', function() {
   return gulp.src('./assets/sass/**/*.scss')
   .pipe(plugins.plumber())
@@ -38,6 +40,8 @@ gulp.task('js', function() {
   .pipe(plugins.concat('bootstrap.js'))
   .pipe(gulp.dest('./public/js'));
 });
+
+gulp.task('eb-deploy', plugins.shell.task('eb deploy'));
 
 // Default task
 gulp.task('watch', function() {
