@@ -27,6 +27,8 @@
     <link href="/css/styles.css" rel="stylesheet" type="text/css">
     <link href="/css/normalize.css" rel="stylesheet" type="text/css">
     <link href="/css/mdi.css" rel="stylesheet" type="text/css">
+    <link href="/css/markdown.css" rel="stylesheet" type="text/css">
+    <link href="/css/post.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lato:400,300" rel="stylesheet" type="text/css">
     <link href="http://cdn.materialdesignicons.com/1.2.65/css/materialdesignicons.min.css" rel="stylesheet" type="text/css">
 
@@ -90,9 +92,16 @@
 </div>
 {% endblock %}
 {% include "footer.njk" %}
+
+<!-- Material Bootstrap stuff -->
 <script src="/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="/vendor/bootstrap-material-design/dist/js/material.min.js"></script>
 <script src="/vendor/bootstrap-material-design/dist/js/ripples.min.js"></script>
 <script> $.material.init(); </script>
+
+<!-- Syntax highlighting for code blocks -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>

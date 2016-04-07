@@ -2,18 +2,33 @@
 
 {% block content %}
 {% post file %}
+<div class="post">
+
+<div class="post-header">
+{% if post.attrs.title %}
 <h1>{{ post.attrs.title }}</h1>
-
-{% if post.attrs.description %}
-<h3>{{ post.attrs.description }}</h3>
 {% endif %}
 
-{% if post.attrs.date %}
-<h5>{{ post.attrs.date }}</h5>
-{% endif %}
+<h3>
+  {% if post.attrs.dateString %}
+  {{ post.attrs.dateString }}
+  {% endif %}
+  {% if post.attrs.dateString and post.attrs.description%}
+  &nbsp;-&nbsp;
+  {% endif %}
+  {% if post.attrs.description %}
+  {{ post.attrs.description }}
+  {% endif %}
+</h3>
+</div>
 
+<hr>
+
+<div class="markdown">
 {% markdown %}
 {{ post.body }}
 {% endmarkdown %}
+</div>
+</div>
 
 {% endblock %}

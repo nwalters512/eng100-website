@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var exbars = require('exbars');
 var routes = require('./routes/index');
+var blog = require('./routes/blog');
 var nunjucks = require('nunjucks');
 var markdown = require('nunjucks-markdown');
 var marked = require('marked');
@@ -40,6 +41,7 @@ env.addFilter('render_markdown', function(filename) {
 markdown.register(env, marked);
 
 app.use('/', routes);
+app.use('/blog', blog);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
