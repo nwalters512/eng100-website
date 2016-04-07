@@ -3,11 +3,11 @@
 @import 'bootstrap-sass/assets/stylesheets/bootstrap';
 @import 'bootstrap-material-design/sass/bootstrap-material-design';
 @import 'bootstrap-material-design/sass/ripples';
-@import 'markdown';
 @import 'mdi';
 @import 'normalize';
 @import 'post';
 @import 'projects';
+@import 'highlightjs_theme';
 p {
     text-align: justify;
 }
@@ -52,6 +52,14 @@ h1.intro {
     width: 2em;
     text-align: center;
 }
+
+// Reset this from bootstrap
+pre {
+  padding: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .footer {
     margin-top: 40px;
 }

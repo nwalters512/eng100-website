@@ -52,5 +52,61 @@ The turtle supports the following commands:
  - `setMoveSpeed(speed)`: sets the speed at which the turtle moves, in units/sec
  - `setTurnSpeed(speed)`: sets the speed at which the turtle turns, in radians/sec
 
+### Examples
+
+The following code snippets demonstrate some interesting things that can be done
+with the turtle. Most of these programs should be copy-pasted into the
+"Text Input" tab on the RTICA; the example below labeled "direct commands"
+should be entered line-by-line into the "Terminal" tab.
+
+ ##### Draws a wireframe cube (direct commands)
+
+```js
+ // Draws base
+ move(5).turn(90).move(5).turn(90).move(5).turn(90).move(5).turn(90)
+ // Moves to top
+ pitch(90).move(5).pitch(-90);
+ // Draws top edges and lines connecting top and base
+ move(5).pitch(-90).move(5).move(-5).pitch(90).turn(90)
+ move(5).pitch(-90).move(5).move(-5).pitch(90).turn(90)
+ move(5).pitch(-90).move(5).move(-5).pitch(90).turn(90)
+ move(5)
+```
+
+ ##### Draws a wireframe cube (scripting)
+
+```js
+ var side = 3;
+ // Draws base
+ for(var i = 0; i < 4; i++) {
+   move(side).turn(90);
+ }
+ // Moves to top
+ pitch(90).move(side).pitch(-90);
+ // Draws top edges and lines connecting top and base
+ for(var i = 0; i < 4; i++) {
+   move(side).pitch(-90).move(side).move(-side).pitch(90).turn(90);
+ }
+```
+
+##### Draws a wireframe sphere (scripting)
+
+```js
+ var movelength = 0.5;
+ var angle = 10;
+ for(var i = 0; i < 18; i++) {
+   for(var j = 0; j < 36; j++) {
+     if(j == 0) {
+       move(movelength/2);
+     } else {
+       move(movelength);
+     }
+     pitch(10);
+   }
+   move(movelength/2);
+   turn(10);
+ }
+```
+
 {% endmarkdown %}
 {% endblock %}
