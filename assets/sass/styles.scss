@@ -1,11 +1,13 @@
 @import 'variables';
-@import 'bootstrap';
-@import 'bootstrap-material-design';
-@import 'ripples';
+@import 'bootstrap-material-design/sass/variables';
+@import 'bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'bootstrap-material-design/sass/bootstrap-material-design';
+@import 'bootstrap-material-design/sass/ripples';
 @import 'markdown';
 @import 'mdi';
 @import 'normalize';
 @import 'post';
+@import 'projects';
 p {
     text-align: justify;
 }

@@ -14,4 +14,12 @@ router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
 
+router.get('/projects', function(req, res, next) {
+  res.render('projects');
+});
+
+router.get('/projects/:name', function(req, res, next) {
+  res.render('projects/' + req.params.name);
+})
+
 module.exports = router;

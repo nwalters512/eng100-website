@@ -1,5 +1,7 @@
-@import 'colors';
+@import 'bootstrap-material-design/sass/colors';
 
 $brand-primary: $indigo !default;
-$font-family-sans-serif: 'Roboto', 'Helvetica', 'Arial', sans-serif !default;
 $font-size-base: 16px;
+$grid-gutter-width: 30px;
+$container-large-desktop: (800px + $grid-gutter-width);
+$container-lg: $container-large-desktop;

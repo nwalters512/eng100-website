@@ -1,0 +1,49 @@
+<html>
+
+<head>
+  <meta charset="utf8">
+  <title>Turtle</title>
+  <link type="text/css" href="css/reset.css" rel="stylesheet" />
+  <link type="text/css" href="css/styles.css" rel="stylesheet" />
+  <link type="text/css" href="css/split.css" rel="stylesheet" />
+  <script src="js/jquery.js"></script>
+  <script src="js/split.js"></script>
+  <script src="js/three.js"></script>
+  <script src="js/stats.min.js"></script>
+  <script src="js/turtle.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+</head>
+
+<body>
+  <div id="input-wrapper" class="split">
+    <nav id="main-nav" class="nav">
+      <a class="nav-title">3D Turtle</a>
+      <ul class="nav-tabs">
+        <li class="active"><a href="#terminal-wrapper">Terminal</a></li>
+        <li><a href="#text-input-wrapper">Text Input</a></li>
+      </ul>
+    </nav>
+    <div id="tabs-container">
+      <div id="terminal-wrapper">
+        <div id="terminal-content"></div>
+        <input id="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+      </div>
+      <div id="text-input-wrapper" class="hidden">
+        <textarea id="text-input"></textarea>
+        <div id="text-input-command-bar">
+          <ul>
+            <li><a id="run-commands" href="#">Run</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="canvas-wrapper" class="split">
+    <div id="three-canvas-container">
+      <canvas id="three-canvas"></canvas>
+    </div>
+  </div>
+</body>
+
+</html>

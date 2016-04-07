@@ -19,8 +19,8 @@ gulp.task('sass', function() {
   .pipe(plugins.plumber())
   .pipe(plugins.sass({
     includePaths: [
-      './assets/vendor/bootstrap-sass/assets/stylesheets',
-      './assets/vendor/bootstrap-material-design/sass'
+      './assets/vendor',
+      './assets/vendor/bootstrap-sass/assets/stylesheets'
     ]
   }))
   .on('error', function(err) {

@@ -1,0 +1,49 @@
+{% extends "base.njk" %}
+
+{% block content %}
+
+{% markdown %}
+# Projects
+
+I've worked on a lot of software projects over the years, both by myself and
+on teams. Some of my favorites are listed below; see
+[my GitHub profile](https://github.com/nwalters512) for a more complete
+representation of everything I've worked on.
+{% endmarkdown %}
+
+<div class="well project">
+  {% markdown %}
+    ### The Blue Alliance
+
+    The Blue Alliance is a website that hosts information about the FIRS
+    Robotics Competition, including event results, team data, match videos,
+    and more. I'm a lead developer for their Android app, which has over
+    15,000 users.
+  {% endmarkdown %}
+  <a class="btn btn-primary btn-raised" href="https://github.com/the-blue-alliance/the-blue-alliance-android">View on GitHub</a>
+</div>
+
+<div class="well project">
+  {% markdown %}
+    ### Spectrum
+
+    Spectrum is a color selection library for Android that I developed for while
+    working on The Blue Alliance. I wasn't happy with anything that others
+    had built, so I decided to roll my own. It's already received a number of
+    issue reports and pull requests from the community.
+  {% endmarkdown %}
+  <a class="btn btn-primary btn-raised" href="https://github.com/the-blue-alliance/spectrum">View on GitHub</a>
+</div>
+
+<div class="well project">
+  {% markdown %}
+    ### 3D Turtle Graphics
+
+    For one of my university honors courses (MATH 198), I had to build an RTICA
+    (Real-Time Interactive Computer Animation) for my final project. I ended up
+    building a browser-based 3D turtle graphics system. This was my first real
+    foray into JavaScript, and I'm very proud of the resulting product.
+  {% endmarkdown %}
+  <a class="btn btn-primary btn-raised" href="/projects/turtle">Read More</a>
+</div>
+{% endblock %}

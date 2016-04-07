@@ -12,7 +12,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ title() }}</title>
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="/img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Search engine stuff -->
     <meta name="description" content="{{ description() }}">
@@ -74,11 +74,9 @@
   </div>
 </div>
 {% block content_container %}
-<div class="main-container">
-    <div class="content">
-      {% block content %}
-      {% endblock %}
-    </div>
+<div class="container">
+    {% block content %}
+    {% endblock %}
 </div>
 {% endblock %}
 {% include "footer.njk" %}
