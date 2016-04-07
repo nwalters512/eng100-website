@@ -5,7 +5,7 @@ express.js app framework for routing and some other stuff. Nunjucks is the view
 engine of choice; its powerful template inheritance system and extensibility
 make it both easy and fun to use.
 
-The blog portion of this site is modelled after Jekyll: all posts are stored as
+The blog portion of this site is inspired by Jekyll: all posts are stored as
 text files (I write them with markdown) and contain YAML "front matter". When a
 blog page is requested, I use a nunjucks extension to load the appropriate
 markdown source file, parse the YAML into an object, parse the markdown body
@@ -26,3 +26,5 @@ Here's a list of all the different things I used to build this site:
  - [marked](https://github.com/chjj/marked): for compiling and parsing markdown
  - [front-matter](https://github.com/jxson/front-matter): for parsing YAML front matter
  - [bootstrap-material-design](https://github.com/FezVrasta/bootstrap-material-design): for making everything pretty
+ - [sass](http://sass-lang.com/): for maintaining my sanity while writing styles
+ - [gulp](http://gulpjs.com/): for automating stuff
