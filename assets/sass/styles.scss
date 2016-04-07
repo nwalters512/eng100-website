@@ -2,76 +2,51 @@
 @import 'bootstrap';
 @import 'bootstrap-material-design';
 @import 'ripples';
-
 @import 'markdown';
 @import 'mdi';
 @import 'normalize';
 @import 'post';
-
 body {
     font-family: 'Lato', sans-serif;
 }
-
-a {
-    color: inherit;
-}
-
-a:hover {
-    color: gray;
-}
-
 p {
     text-align: justify;
 }
-
 p.links {
     text-align: center;
+}
+p.links a {
     color: #a2a2a2;
 }
-
 .main-container {
     max-width: 800px;
     margin: 0 auto;
 }
-
 .content {
     padding-left: 10px;
     padding-right: 10px;
 }
-
 img.profile {
     width: 150px;
     border-radius: 50%;
     display: block;
-    margin: auto;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin: 15px auto;
     box-shadow: 0 0 4px rgba(0, 0, 0, 1);
 }
-
 h1.intro {
     font-weight: 100;
-    margin: 0;
+    margin-bottom: 10px;
     text-align: center;
 }
-
-/*h5 {
-    font-size: 1.5em;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-}*/
-
 .mdi-ul {
-    padding-left: 0px;
+    padding-left: 0;
     margin-left: 2em;
     list-style-type: none;
 }
-
 .mdi-ul > li {
     position: relative;
     margin-bottom: 15px;
 }
-
 .mdi-li {
     position: absolute;
     left: -2em;
@@ -79,15 +54,17 @@ h1.intro {
     top: 0.4em;
     text-align: center;
 }
-
 .footer {
-	margin-top: 40px;
+    margin-top: 40px;
 }
 .footer > p {
-	color: rgba(0,0,0,0.4);
-	text-align: center;
+    color: rgba(0,0,0,0.4);
+    text-align: center;
 }
-
 /* Fancy animation stuff */
-.grow { transition: all .2s ease-in-out; }
-.grow:hover { transform: scale(1.1); }
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+    transform: scale(1.1);
+}
