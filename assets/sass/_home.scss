@@ -1,0 +1,26 @@
+div.links {
+    text-align: center;
+}
+div.links a {
+    color: #a2a2a2;
+}
+img.profile {
+    width: 150px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 1);
+}
+h1.intro {
+    font-weight: 100;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Fancy animation stuff */
+.grow {
+    transition: all 0.2s ease-in-out;
+}
+.grow:hover {
+    transform: scale(1.1);
+}

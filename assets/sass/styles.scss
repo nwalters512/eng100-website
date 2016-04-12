@@ -5,38 +5,24 @@
 @import 'bootstrap-material-design/sass/ripples';
 @import 'mdi';
 @import 'normalize';
-@import 'post';
 @import 'contact';
 @import 'highlightjs_theme';
+@import 'home';
+@import 'blog';
+
+body {
+  padding-top: 70px;
+}
 
 p {
-    text-align: justify;
+    // text-align: justify;
+    line-height: 1.5;
+    //font-size: 20px;
+    margin-bottom: 1.75em;
 }
-p.links {
-    text-align: center;
-}
-p.links a {
-    color: #a2a2a2;
-}
-.main-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-.content {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-img.profile {
-    width: 150px;
-    border-radius: 50%;
-    display: block;
-    margin: 15px auto;
-    box-shadow: 0 0 4px rgba(0, 0, 0, 1);
-}
-h1.intro {
-    font-weight: 100;
-    margin-bottom: 10px;
-    text-align: center;
+
+.container {
+  font-size: 20px;
 }
 .mdi-ul {
     padding-left: 0;
@@ -51,6 +37,7 @@ h1.intro {
     position: absolute;
     left: -2em;
     width: 2em;
+    top: 0.5em;
     text-align: center;
 }
 
@@ -61,17 +48,11 @@ pre {
   margin-bottom: 20px;
 }
 
-.footer {
+footer {
     margin-top: 40px;
+    margin-bottom: 20px;
 }
-.footer > p {
+footer > p {
     color: rgba(0,0,0,0.4);
     text-align: center;
-}
-/* Fancy animation stuff */
-.grow {
-    transition: all 0.2s ease-in-out;
-}
-.grow:hover {
-    transform: scale(1.1);
 }

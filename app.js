@@ -10,7 +10,6 @@ var blog = require('./routes/blog');
 var nunjucks = require('nunjucks');
 var markdown = require('nunjucks-markdown');
 var marked = require('marked');
-var FetchPost = require('./fetch-post');
 
 var app = express();
 
@@ -33,13 +32,6 @@ var env = new nunjucks.Environment(new nunjucks.FileSystemLoader(['markdown', 't
 });
 
 env.express(app);
-
-env.addExtension('FetchPost', new FetchPost(env));
-
-// Add support for rendering markdown
-env.addFilter('render_markdown', function(filename) {
-  return "It works!";
-});
 
 markdown.register(env, marked);
 
