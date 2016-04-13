@@ -15,7 +15,9 @@ var app = express();
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+  extended: false
+}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 if (app.get('env') === 'development') {
@@ -53,7 +55,7 @@ if (app.get('env') === 'development') {
   app.use(function(err, req, res, next) {
     var status = err.status || 500;
     res.status(status);
-    if(err.status == 404) {
+    if (err.status == 404) {
       res.render('404');
     } else {
       res.render('error', {
@@ -69,7 +71,7 @@ if (app.get('env') === 'development') {
 app.use(function(err, req, res, next) {
   var status = err.status || 500;
   res.status(status);
-  if(err.status == 404) {
+  if (err.status == 404) {
     res.render('404');
   } else {
     res.render('error', {

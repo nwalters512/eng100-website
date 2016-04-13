@@ -11,9 +11,9 @@
 }
 
 .hljs-keyword,
-.hljs-selector-tag,
 .hljs-literal,
-.hljs-selector-id {
+.hljs-selector-id,
+.hljs-selector-tag {
   color: #93c763;
 }
 
@@ -29,14 +29,14 @@
   color: #668bb0;
 }
 
-.hljs-code,
 .hljs-class .hljs-title,
+.hljs-code,
 .hljs-section {
   color: white;
 }
 
-.hljs-regexp,
-.hljs-link {
+.hljs-link,
+.hljs-regexp {
   color: #d39745;
 }
 
@@ -44,19 +44,19 @@
   color: #557182;
 }
 
-.hljs-tag,
-.hljs-name,
-.hljs-bullet,
-.hljs-subst,
-.hljs-emphasis,
-.hljs-type,
+.hljs-addition,
 .hljs-built_in,
+.hljs-bullet,
+.hljs-emphasis,
+.hljs-name,
 .hljs-selector-attr,
 .hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
+.hljs-subst,
+.hljs-tag,
 .hljs-template-tag,
-.hljs-template-variable {
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable {
   color: #8cbbad;
 }
 
@@ -66,23 +66,23 @@
 }
 
 .hljs-comment,
-.hljs-quote,
-.hljs-deletion {
+.hljs-deletion,
+.hljs-quote {
   color: #818e96;
 }
 
 .hljs-selector-class {
-  color: #A082BD
+  color: #A082BD;
 }
 
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
 .hljs-doctag,
-.hljs-title,
-.hljs-section,
-.hljs-type,
+.hljs-keyword,
+.hljs-literal,
 .hljs-name,
-.hljs-strong {
+.hljs-section,
+.hljs-selector-tag,
+.hljs-strong,
+.hljs-title,
+.hljs-type {
   font-weight: bold;
 }
