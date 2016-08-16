@@ -1,0 +1,21 @@
+{
+  "name": "nwalters.com",
+  "description": "My personal website",
+  "main": "",
+  "authors": [
+    "Nathan Walters <nwalters512@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/nwalters512/website",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "^0.5.9"
+  }
+}

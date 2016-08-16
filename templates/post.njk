@@ -1,0 +1,33 @@
+{% extends "base.njk" %}
+
+{% if post.title %}
+{% block title %}{{post.title}} - Nathan Walters{% endblock %}
+{% endif %}
+{% if post.description %}
+{% block description %}{{post.description}}{% endblock %}
+{% endif %}
+
+{% block content %}
+<div class="post">
+
+  <div class="post-header">
+    {% if post.dateString %}
+    <p class="post-date">{{ post.dateString }}</p>
+    {% endif %}
+
+    {% if post.title %}
+    <h1 class="post-title">{{ post.title }}</h1>
+    {% endif %}
+
+    {% if post.description %}
+    <h3 class="post-description">{{ post.description }}</h3>
+    {% endif %}
+
+  </div>
+
+  <div class="markdown dropcap">
+    {{ post.body }}
+  </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>3D Turtle</title>
+  <link type="text/css" href="css/styles.css" rel="stylesheet" />
+  <!-- For code highlighting/formatting -->
+  <link href="http://alexgorbatchev.com/pub/sh/current/styles/shThemeDefault.css" rel="stylesheet" type="text/css" />
+  <link href="http://alexgorbatchev.com/pub/sh/current/styles/shCore.css" rel="stylesheet" type="text/css" />
+  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shCore.js" type="text/javascript"></script>
+  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shAutoloader.js" type="text/javascript"></script>
+  <script src="http://alexgorbatchev.com/pub/sh/current/scripts/shBrushJScript.js" type="text/javascript"></script>
+</head>
+
+<body>
+  <p>Last edited 13dec2015 by <a href="mailto:nwalter2@illinois.edu">nwalter2@illinois.edu</a></p>
+
+  <h1>3D Turtle Graphics</h1>
+  <h3>By Nathan Walters</h3>
+
+  <a href="files/project/src/index.html" class="rtica-button">LAUNCH RTICA</a>
+
+
+  <div class="demo-image-wrapper">
+    <img src="img/turtle_cube.png" class="demo-image" />
+    <img src="img/turtle_sphere.png" class="demo-image" />
+    <img src="img/turtle_smooth_ripple.png" class="demo-image" />
+    <img src="img/turtle_fractal.png" class="demo-image" />
+  </div>
+
+  <h2>Abstract</h2>
+  <p>My project is a 3D turtle graphics application implemented using JavaScript and HTML5. It works very similarly to a standard 2D turtle system, with the logical extension that the turtle will be able to move along a third dimension. It also allows the user to move the camera so as to be able to view the turtle's drawings from different perspectives. More information about my project can be seen in my <a href="files/project/proposal/proposal.pdf">project proposal</a>.</p>
+
+  <h2>RTICA</h2>
+  <p>You can read about my finished RTICA in the <a href="files/project/documentation/documentation.pdf">project documentation</a>. It is implementated as a single-page web application with HTML, JavaScript, and the three.js graphics library. Users have two ways to enter commands.</p>
+  <ul>
+    <li>The first is a "terminal"-like interface (REPL), where you can enter one line at a time.</li>
+    <li>The second allows you to type multiple lines of code at a time and then execute them all at once; this is ideal for scripting complex turtle behavior. All commands are entered as JavaScript code, which is then parsed and executed with JavaScript's eval(...) function.</li>
+  </ul>
+
+  <h2>Commands</h2>
+  <p>The turtle supports the following commands:</p>
+  <ul>
+    <li>move(distance): move forward/backwards</li>
+    <li>goto(x, y, x): jump immediately to the location (x, y, z) without changing the turtle's orientation</li>
+    <li>turn(degrees): turns right/left by the specified angle</li>
+    <li>pitch(degrees): pitches up/down by the specifies angle</li>
+    <li>roll(degrees): rolls clockwise/counterclockwise by the specified angle</li>
+    <li>penup(): prevents the turtle from making lines as it moves until a call to penup()</li>
+    <li>pendown(): makes the turtle draw lines as it moves</li>
+    <li>replay(): replays the turtle's commands</li>
+    <li>status(): prints out the turtle's position and orientation vectors</li>
+    <li>reset(): clears the turtle's path, resets its heading to the default, and positions the turtle at the origin</li>
+    <li>hide(): hides the turtle</li>
+    <li>show(): shows the turtle</li>
+    <li>setMoveSpeed(speed): sets the speed at which the turtle moves, in units/sec</li>
+    <li>setTurnSpeed(speed): sets the speed at which the turtle turns, in radians/sec</li>
+  </ul>
+
+  <h2>Examples</h2>
+  <p>The following code snippets demonstrate some interesting things that can be done with the turtle. More scripts can be found <a href="files/project/src/turtle_scripts">in this folder</a>. Most of these programs should be copy-pasted into the "Text Input" tab on the RTICA; the example below labeled "direct commands" should be entered line-by-line into the "Terminal" tab.</p>
+  <h3>Draws a wireframe cube (direct commands)</h3>
+  <script type="syntaxhighlighter" class="brush: js">
+    <![CDATA[
+  // Draws base
+  move(5).turn(90).move(5).turn(90).move(5).turn(90).move(5).turn(90)
+  // Moves to top
+  pitch(90).move(5).pitch(-90);
+  // Draws top edges and lines connecting top and base
+  move(5).pitch(-90).move(5).move(-5).pitch(90).turn(90)
+  move(5).pitch(-90).move(5).move(-5).pitch(90).turn(90)
+  move(5).pitch(-90).move(5).move(-5).pitch(90).turn(90)
+  move(5)
+  ]]>
+  </script>
+  <h3>Draws a wireframe cube (scripting)</h3>
+  <script type="syntaxhighlighter" class="brush: js">
+    <![CDATA[
+  var side = 3;
+  // Draws base
+  for(var i = 0; i < 4; i++) {
+    move(side).turn(90);
+  }
+  // Moves to top
+  pitch(90).move(side).pitch(-90);
+  // Draws top edges and lines connecting top and base
+  for(var i = 0; i < 4; i++) {
+    move(side).pitch(-90).move(side).move(-side).pitch(90).turn(90);
+  }
+  ]]>
+  </script>
+  <h3>Draws a wireframe sphere (scripting)</h3>
+  <script type="syntaxhighlighter" class="brush: js">
+    <![CDATA[
+  var movelength = 0.5;
+  var angle = 10;
+  for(var i = 0; i < 18; i++) {
+    for(var j = 0; j < 36; j++) {
+      if(j == 0) {
+        move(movelength/2);
+      } else {
+        move(movelength);
+      }
+      pitch(10);
+    }
+    move(movelength/2);
+    turn(10);
+  }
+  ]]>
+  </script>
+
+  <script type="text/javascript">
+    SyntaxHighlighter.all()
+  </script>
+
+
+</body>
+
+</html>

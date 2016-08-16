@@ -1,0 +1,165 @@
+body {
+  margin: 0px;
+  font-family: monospace;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+.half-page {
+  height: 100%;
+  width: 50%;
+  float: left;
+}
+#main-nav {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  border-bottom: solid white 1px;
+}
+.nav {
+  color: white;
+}
+.nav > ul.nav-tabs {
+  margin: 0px;
+  padding: 0px;
+}
+.nav > ul.nav-tabs > li {
+  float: right;
+  position: relative;
+  display: block;
+}
+.nav > ul.nav-tabs > li.active {
+  background: #303030;
+  color: white;
+  border: 1px solid white;
+  border-bottom-color: transparent;
+  bottom: -1px;
+}
+.nav a {
+  padding: 12px;
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+.nav > a.nav-title {
+  float: left;
+}
+#tabs-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+}
+#input-wrapper {
+  background: black;
+  box-sizing: border-box;
+  position: relative;
+}
+#terminal-wrapper {
+  height: 100%;
+  color: white;
+  position: relative;
+  overflow-y: auto;
+  padding: 5px;
+  box-sizing: border-box;
+}
+#terminal-content {
+  width: 100%;
+  top: 0px;
+}
+
+#terminal-content > p {
+  margin: 0px;
+}
+
+#terminal-input {
+  width: 100%;
+  background-color: black;
+  border-style: none;
+  font-family: inherit;
+  font-size: inherit;
+  color: white;
+  outline: none;
+  border: none;
+  padding: 0px;
+}
+#text-input-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+#text-input {
+  background: black;
+  color: white;
+  font-family: inherit;
+  font-size: inherit;
+  resize: none;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  /* should match #text-input-command-bar.height */
+  bottom: 45px;
+}
+#text-input-command-bar {
+  width: 100%;
+  /* should match #text-input.bottom */
+  height: 45px;
+  position: absolute;
+  bottom: 0px;
+  background: gray;
+}
+#text-input-command-bar ul {
+  margin: 0px;
+  padding: 0px;
+}
+#text-input-command-bar li {
+  float: left;
+  position: relative;
+  display: block;
+}
+#text-input-command-bar a {
+  padding: 12px;
+  text-decoration: none !important;
+  display: block;
+}
+.hidden {
+  display: none;
+}
+
+/* Hacky thing to prevent a scrollbar from appearing when each child has a non-whole number width */
+
+#canvas-wrapper {
+  position: relative;
+  right: 1px;
+}
+#three-canvas-container {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  position: relative;
+}
+.fill-parent {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.renderer-label {
+  position: absolute;
+  bottom: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+.renderer-label.label-three {
+  color: black;
+}
+.renderer-label.label-canvas {
+  color: white;
+}
+.error {
+  color: red;
+}
+.help, .help * {
+  color: lightgreen;
+}

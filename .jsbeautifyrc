@@ -1,0 +1,13 @@
+{
+  "css": {
+    "beautify_on_save": true,
+    "indent_char": " ",
+    "indent_size": 2,
+    "preserve_newlines": true
+  },
+  "js": {
+    "indent_char": " ",
+    "indent_size": 2,
+    "end_with_newline": true
+  }
+}
