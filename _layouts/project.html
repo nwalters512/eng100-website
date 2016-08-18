@@ -1,0 +1,16 @@
+---
+layout: default
+---
+{% assign content = page.content | strip_newlines %}
+{% if content == "" %}
+<div class="well project">
+  <h3>{{ page.title }}</h3>
+  <p>{{ page.description }}</p>
+
+  {% if page.button.text %}
+    <a class="btn btn-primary btn-raised" href="{{ page.button.link | default: page.url }}">{{ page.button.text }}</a>
+  {% endif %}
+</div>
+{% else %}
+  {{ page.content }}
+{% endif %}
