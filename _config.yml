@@ -45,6 +45,17 @@ collections:
     output: true
     permalink: /projects/:path/
 
+exclude:
+  - .bowerrc
+  - .gitignore
+  - bower.json
+  - firebase.json
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - README.md
+  - node_modules
+
 defaults:
   - scope:
       path: ""
