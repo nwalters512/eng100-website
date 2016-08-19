@@ -34,8 +34,8 @@ exclude:
 sass:
   load_paths:
     - _sass
-    - assets/vendor
-    - assets/vendor/bootstrap-sass/assets/stylesheets
+    - _assets/vendor
+    - _assets/vendor/bootstrap-sass/assets/stylesheets
 
 kramdown:
   parse_block_html: true
